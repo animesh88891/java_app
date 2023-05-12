@@ -13,8 +13,7 @@ pipeline{
 //     }
 
     stages{
-         
-        stage('Git Checkout'){
+           stage('Git Checkout'){
             //        when { expression {  params.action == 'create' } }
             steps{
             gitCheckout(
@@ -22,6 +21,7 @@ pipeline{
                 url: "https://github.com/animesh88891/java_app.git"
             )
        }
+           }
        stage('Unit Test maven'){
          
        //    when { expression {  params.action == 'create' } }
@@ -30,7 +30,6 @@ pipeline{
                    
                    mvnTest()
                }
-            }
         }     
      }
    }
