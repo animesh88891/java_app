@@ -22,6 +22,16 @@ pipeline{
                 url: "https://github.com/animesh88891/java_app.git"
             )
        }
+       stage('Unit Test maven'){
+         
+       //    when { expression {  params.action == 'create' } }
+            steps{
+               script{
+                   
+                   mvnTest()
+               }
+            }
+        }     
      }
-}
-}
+   }
+ }
