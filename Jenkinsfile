@@ -17,12 +17,11 @@ pipeline{
         stage('Git Checkout'){
             //        when { expression {  params.action == 'create' } }
             steps{
-                script{
             gitCheckout(
                 branch: "main",
                 url: "https://github.com/animesh88891/java_app.git"
             )
-            }
+        }
         }
         }
 //          stage('Unit Test maven'){
@@ -111,4 +110,4 @@ pipeline{
 //             }
 //         }      
 //     }
-}
+
